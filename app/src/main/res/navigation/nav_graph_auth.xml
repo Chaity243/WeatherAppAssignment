@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph_auth"
+            app:startDestination="@id/signUpFragment"
+>
+    <action
+            android:id="@+id/nav_to_signUp"
+    />
+
+    <fragment android:id="@+id/signUpFragment"
+              android:name="com.msil.sharedmobility.subscribe.presentation.ui.auth.SignUpFragment"
+              android:label="SignUpFragment"
+              tools:layout="@layout/fragment_signup">
+
+    </fragment>
+
+    <action
+            android:id="@+id/nav_to_verify_Otp"
+            app:destination="@id/verifyOtpFragment"
+    />
+
+    <fragment android:id="@+id/verifyOtpFragment"
+              android:name="com.msil.sharedmobility.subscribe.presentation.ui.auth.VerifyOtpFragment"
+              android:label="fragment_verify_otp"
+              tools:layout="@layout/fragment_verify_otp">
+
+        <argument android:name="mobile_number"
+                  app:argType="string"
+                  android:defaultValue="0"/>
+        <action android:id="@+id/action_verifyOtpFragment_to_registerUserFragment"
+                app:destination="@id/registerUserFragment"/>
+
+    </fragment>
+
+    <action
+            android:id="@+id/nav_to_signIn"
+            app:destination="@id/signInFragment"
+    />
+
+
+    <fragment android:id="@+id/signInFragment"
+              android:name="com.msil.sharedmobility.subscribe.presentation.ui.auth.SignInFragment"
+              android:label="fragment_sign_in_with_mobile"
+              tools:layout="@layout/fragment_sign_in">
+
+        <action android:id="@+id/action_signInFragment_to_verifyOtpFragment" app:destination="@id/verifyOtpFragment"/>
+    </fragment>
+
+    <action
+            android:id="@+id/nav_to_personal_info_fragment"
+            app:destination="@id/addPersonalInfoFragment"
+    />
+
+    <fragment android:id="@+id/addPersonalInfoFragment"
+              android:name="com.msil.sharedmobility.subscribe.presentation.ui.auth.AddPersonalInfoFragment"
+              android:label="fragment_fetch_personal_info"
+              tools:layout="@layout/fragment_personal_info">
+
+        <argument android:name="param_email"
+                  app:argType="string"
+                  android:defaultValue="email"/>
+
+        <argument android:name="param_name"
+                  app:argType="string"
+                  android:defaultValue="name"/>
+        <argument android:name="userId" app:argType="string" android:defaultValue=" "/>
+    </fragment>
+
+    <action
+            android:id="@+id/nav_to_register_user"
+            app:destination="@id/registerUserFragment"
+    />
+
+    <fragment android:id="@+id/registerUserFragment"
+              android:name="com.msil.sharedmobility.subscribe.presentation.ui.auth.RegisterFragment"
+              android:label="RegisterFragment"
+              tools:layout="@layout/fragment_register">
+        <action android:id="@+id/action_registerUserFragment_to_addPersonalInfoFragment"
+                app:destination="@id/addPersonalInfoFragment"/>
+        <argument android:name="mobile_number" app:argType="string"/>
+    </fragment>
+
+    <action
+            android:id="@+id/nav_to_home_activity"
+            app:destination="@id/homeActivity"
+    />
+
+    <activity
+            android:id="@+id/homeActivity"
+            android:name="com.msil.sharedmobility.subscribe.presentation.ui.home.HomeActivity"
+    />
+
+</navigation>

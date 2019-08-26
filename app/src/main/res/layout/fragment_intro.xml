@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:padding="@dimen/margin_32"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+            android:id="@+id/rl_top_container"
+            android:layout_width="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="@dimen/logo_width"
+                android:layout_height="@dimen/logo_height"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/logo"
+                android:layout_alignParentLeft="true"/>
+
+        <TextView
+                android:id="@+id/tv_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SKIP"
+                android:gravity="end|center_vertical"
+                style="@style/TextBigUpperBlueBold"
+                android:drawableRight="@drawable/ic_chevron_left_blue_24dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/iv_logo"
+        />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+            android:id="@+id/fl_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rl_top_container"
+            android:layout_above="@+id/intro_indicator">
+
+        <com.msil.sharedmobility.subscribe.presentation.customcontrol.carouselview.ViewPagerComponent
+                android:id="@+id/vp_intro"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteY="189dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:clickable="false"
+                android:layout_marginTop="@dimen/default_margin"
+        >
+        </com.msil.sharedmobility.subscribe.presentation.customcontrol.carouselview.ViewPagerComponent>
+
+        <ImageButton
+                android:id="@+id/iv_left_click"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical|left"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/ic_chevron_left_blue_48dp"
+        />
+
+        <ImageButton
+                android:id="@+id/iv_right_click"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@color/colorTransparent"
+                android:src="@drawable/ic_chevron_left_blue_24dp"
+
+        />
+
+    </FrameLayout>
+
+    <com.msil.sharedmobility.subscribe.presentation.customcontrol.CirclePageControl.CirclePageIndicator
+            android:id="@+id/intro_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin"
+            app:radius="@dimen/circle_indicator_radius"
+            app:fillColor="@color/colorBlue"
+            android:layout_above="@+id/btn_nxt"/>
+
+    <Button
+            android:id="@+id/btn_nxt"
+            android:layout_width="match_parent"
+            android:text="@string/get_started"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_height="wrap_content"
+            style="@style/ButtonBigUpperBlueBold"
+            android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
+

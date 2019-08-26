@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#01458e</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#606060</color>
+    <color name="colorBlack">#606060</color>
+    <color name="colorPureBlack">#000</color>
+    <color name="colorWhite">#fff</color>
+    <color name="rippleColor">#B7BB5252</color>
+    <color name="colorBlue">#01458e</color>
+    <color name="colorTransparent">#00FFFFFF</color>
+    <color name="colorDisabled">#eeeeee</color>
+    <color name="colorDisabledGrid">#999999</color>
+    <color name="colorDivider">#eeeeee</color>
+    <color name="red">#F44336</color>
+    <color name="gray_light">#ededed</color>
+
+
+    <!--App colors guidelines-->
+
+    <color name="sample">#ededed</color>
+    <!--font color starts-->
+    <color name="colorStatusGreen">#24AC87</color>
+    <color name="colorStatusRed">#D0021B</color>
+
+
+    <color name="colorBG1">#FFFFFF</color>
+
+
+    <color name="colorTextPrimary1">#01458e</color>
+    <color name="colorTextPrimary2">#333333</color>
+
+    <color name="colorTextSecondary1">#666666</color>
+    <color name="colorTextSecondary2">#999999</color>
+    <color name="colorTextSecondary3">#efefef</color>
+
+    <!--font color ends-->
+
+    <!--app view color starts-->
+
+
+
+    <color name="colorPrimary1">#01458e</color>
+    <color name="colorPrimary2">#333333</color>
+
+    <color name="colorSecondary1">#666666</color>
+    <color name="colorSecondary2">#999999</color>
+    <color name="colorSecondary3">#efefef</color>
+
+    <!--app view color ends-->
+
+    <!-- General calender range stuff -->
+    <color name="selected_date_circle_color">#54B948</color>
+
+    <!-- Fonts -->
+    <color name="title_color">#000</color>
+    <color name="date_color">#000</color>
+    <color name="week_color">#000</color>
+
+    <!-- Calendar Date -->
+    <color name="default_date_color">#3b4144</color>
+    <color name="disable_date_color">#BDBDBD</color>
+    <color name="range_date_color">@color/default_date_color</color>
+    <color name="selected_date_color">#FFF</color>
+    <color name="range_bg_color">#B7C99D</color>
+    <color name="calendar_text">#474747</color>
+    <!-- General calender range stuff End -->
+
+</resources>

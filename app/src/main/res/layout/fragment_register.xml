@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp">
+
+    <ScrollView
+            android:id="@+id/sv_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_nxt">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="32dp">
+
+
+            <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    style="@style/TextBold"
+                    android:text="@string/register_via"/>
+
+            <include layout="@layout/social_login_view"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="16dp"
+                     android:layout_below="@+id/tv_login"
+                     android:id="@+id/rl_media_container"/>
+
+            <TextView
+                    android:text="Or"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tv_or"
+                    android:layout_below="@+id/rl_media_container"
+                    android:layout_marginTop="32dp"/>
+
+            <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_below="@+id/tv_or"
+                    android:text="@string/txtProfileDetailsTitle"
+                    style="@style/TextBold"
+            android:layout_marginTop="32dp"/>
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/til_name"
+                    android:layout_marginTop="32dp"
+                    android:layout_below="@id/tv_title">
+
+                <EditText
+                        android:hint="@string/txtEnterName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:id="@+id/et_name"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="16dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/til_email_no"
+                android:layout_below="@id/til_name">
+
+            <EditText
+                    android:hint="@string/txtEnterEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:maxLines="1"
+                    android:id="@+id/emailEditText"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/til_password"
+                    android:layout_below="@id/til_email_no">
+
+                <com.msil.sharedmobility.subscribe.presentation.customcontrol.ShowHidePasswordEditText
+                        android:hint="@string/txtCreatePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:id="@+id/passwordEditText"
+                        android:layout_marginTop="16dp"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/btn_registration"
+            android:layout_width="match_parent"
+            android:text="@string/txtRegister"
+            android:layout_marginTop="16dp"
+            android:layout_height="wrap_content"
+            style="@style/ButtonBigUpperBlueBold"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:enabled="false"/>
+
+</RelativeLayout>

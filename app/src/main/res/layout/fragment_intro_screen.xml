@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+                name="intoBanner"
+                type="com.msil.sharedmobility.subscribe.presentation.ui.splash.IntroBanner"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    <ImageView
+            android:id="@+id/iv_intro"
+            android:layout_width="@dimen/iv_intro"
+            android:layout_height="@dimen/iv_intro"
+            tools:srcCompat="@tools:sample/avatars"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            android:layout_marginTop="@dimen/default_margin"
+            app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="@string/intro_test_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_intro_title"
+            android:layout_marginTop="@dimen/margin_32"
+            app:layout_constraintTop_toBottomOf="@+id/iv_intro"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:gravity="center"
+            style="@style/TextBigBlueBold"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"/>
+    <TextView
+            android:text="@string/intro_test_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_intro_text"
+            app:layout_constraintTop_toBottomOf="@+id/tv_intro_title"
+            android:layout_marginBottom="@dimen/margin_32"
+            android:gravity="center"
+            style="@style/TextBold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="@dimen/default_margin"
+            android:layout_marginStart="@dimen/default_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_marginRight="@dimen/default_margin"
+            android:layout_marginTop="@dimen/margin_32"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

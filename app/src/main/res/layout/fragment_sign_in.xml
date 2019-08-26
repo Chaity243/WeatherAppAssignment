@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+   <!-- <include layout="@layout/registration_toolbar"/>-->
+    <ScrollView
+            android:id="@+id/sv_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btn_nxt">
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_32"
+                android:layout_marginRight="@dimen/margin_32">
+            <TextView
+                    android:text="@string/sign_in_title"
+                    android:layout_width="@dimen/margin_200"
+                    android:gravity="center"
+                    android:textColor="@color/colorPureBlack"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView" android:layout_marginTop="64dp"
+                    />
+
+
+            <com.msil.sharedmobility.subscribe.presentation.customcontrol.CustomToggleComponent
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_50"
+                    android:gravity="center"
+                    android:id="@+id/toggleComp"
+                    android:layout_below="@id/textView"
+                    app:default_selection="right"
+                    >
+
+            </com.msil.sharedmobility.subscribe.presentation.customcontrol.CustomToggleComponent>
+
+            <TextView
+                    android:id="@+id/tv_login"
+                    android:layout_width="match_parent"
+                    android:layout_below="@id/toggleComp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_30"
+                    android:text="Login via"/>
+
+
+
+            <include layout="@layout/social_login_view"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginTop="@dimen/default_margin"
+                     android:layout_below="@+id/tv_login"
+                     android:id="@+id/rl_media_container"/>
+            <TextView
+                    android:text="Or"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/tv_or"
+                    android:layout_below="@+id/rl_media_container"
+                    android:layout_marginTop="@dimen/default_margin"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/til_email_no"
+                    android:layout_below="@id/tv_or">
+
+                <EditText
+                        android:hint="@string/textEnterIDOrMobile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:maxLines="1"
+                        android:id="@+id/emailEditText"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="@dimen/default_margin"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/til_password"
+                    android:layout_below="@id/til_email_no">
+
+                <com.msil.sharedmobility.subscribe.presentation.customcontrol.ShowHidePasswordEditText
+                        android:hint="Enter Password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:id="@+id/passwordEditText"
+                        android:layout_marginTop="@dimen/default_margin"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <RelativeLayout
+                    android:id="@+id/rl_hyper_link"
+                    android:layout_below="@+id/til_password"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:layout_height="wrap_content">
+
+                <com.msil.sharedmobility.subscribe.presentation.customcontrol.HyperLinkView
+                        android:id="@+id/hl_forgot_password"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textForgotPassword"
+                        android:textColor="@color/colorBlue"
+                        android:layout_alignParentLeft="true"/>
+
+                <com.msil.sharedmobility.subscribe.presentation.customcontrol.HyperLinkView
+                        android:id="@+id/hl_get_otp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/textGetOTP"
+                        android:enabled="true"
+                        android:textColor="@color/colorBlue"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"/>
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+            android:id="@+id/btn_nxt"
+            android:layout_width="match_parent"
+            android:text="@string/textSignIn"
+            android:layout_marginTop="@dimen/default_margin"
+            android:layout_height="wrap_content"
+            style="@style/ButtonBigUpperBlueBold"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/default_margin"
+            android:enabled="false"/>
+
+</RelativeLayout>

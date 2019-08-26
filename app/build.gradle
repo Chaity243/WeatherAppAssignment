@@ -1,0 +1,141 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'androidx.navigation.safeargs'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.1"
+    defaultConfig {
+        applicationId "com.msil.sharedmobility.subscribe"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "server"
+    productFlavors {
+        local {
+//            applicationIdSuffix ".uat"
+            manifestPlaceholders = ["fabric_key": "xxx"]
+            buildConfigField 'String', 'BASE_URL', '"http:10.175.16.151:8080"'
+            dimension "server"
+        }
+        uat {
+//            applicationIdSuffix ".uat"
+            manifestPlaceholders = ["fabric_key": "xxx"]
+            buildConfigField 'String', 'BASE_URL', '"https://319nphwzpk.execute-api.ap-southeast-1.amazonaws.com"'
+            dimension "server"
+        }
+        stagging {
+//            applicationIdSuffix ".stag"
+            manifestPlaceholders = ["fabric_key": "xxx"]
+            buildConfigField 'String', 'BASE_URL', '"https://319nphwzpk.execute-api.ap-southeast-1.amazonaws.com"'
+            dimension "server"
+        }
+        production {
+//            applicationIdSuffix ".prod"
+            manifestPlaceholders = ["fabric_key": "xxx"]
+            buildConfigField 'String', 'BASE_URL', '"https://319nphwzpk.execute-api.ap-southeast-1.amazonaws.com"'
+            dimension "server"
+        }
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+    kapt {
+        generateStubs = true
+    }
+
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
+
+    androidExtensions {
+        experimental = true
+    }
+
+}
+
+dependencies {
+    implementation project(':domain')
+    implementation project(':data')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    /* Dagger2 - We are going to use dagger.android which includes
+    * support for Activity and fragment injection so we need to include
+    * the following dependencies */
+    implementation 'com.google.dagger:dagger-android:2.17'
+    implementation 'com.google.dagger:dagger-android-support:2.17'
+    kapt 'com.google.dagger:dagger-android-processor:2.17'
+
+    /* Dagger2 - default dependency */
+    kapt 'com.google.dagger:dagger-compiler:2.17'
+
+    kapt 'com.android.databinding:compiler:1.0-rc0'
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_Logging_Version"
+
+    //RxJava
+    implementation "io.reactivex.rxjava2:rxjava:$rx_java2_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android2_version"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rx_kotlin_version"
+
+
+    /* Picasso lib for image loading  */
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    /* Android Architecture Component - Room Persistance Lib  */
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    implementation 'android.arch.persistence.room:rxjava2:1.1.1'
+    annotationProcessor 'android.arch.persistence.room:compiler:1.1.1'
+    implementation 'androidx.room:room-common:1.1.1'
+
+    // android architecture component
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion"
+    implementation "androidx.paging:paging-runtime:$pagingVersion"
+//    implementation 'androidx.navigation:navigation-fragment-ktx:nav_version'
+//    implementation 'androidx.navigation:navigation-ui-ktx:nav_version'
+
+    // Navigation
+
+    implementation "android.arch.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "android.arch.navigation:navigation-ui-ktx:$nav_version"
+
+    //aws base sdk
+    implementation 'com.amazonaws:aws-android-sdk-ddb:2.14.+'
+
+    //For AWSMobileClient only:
+    implementation 'com.amazonaws:aws-android-sdk-mobile-client:2.14.+'
+    //aws congnito auth
+    implementation 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.14.+'
+
+    //calligraphy
+//    implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'io.github.inflationx:calligraphy3:3.1.1'
+    implementation 'io.github.inflationx:viewpump:2.0.3'
+}
