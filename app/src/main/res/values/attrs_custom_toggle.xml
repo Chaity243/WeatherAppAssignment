@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="CustomToggleComponent">
-        <attr name="default_selection" format="enum">
-            <enum name="left" value="0"/>
-            <enum name="right" value="1"/>
-        </attr>
-    </declare-styleable>
-</resources>
