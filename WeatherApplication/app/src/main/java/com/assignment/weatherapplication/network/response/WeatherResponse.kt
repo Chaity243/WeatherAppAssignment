@@ -1,7 +1,7 @@
-package com.test.weatherapplication.network.response
+package com.assignment.weatherapplication.network.response
 
 import com.google.gson.annotations.SerializedName
-import com.test.weatherapplication.network.response.modal.*
+import com.assignment.weatherapplication.network.response.modal.*
 
 data class WeatherResponse(
 

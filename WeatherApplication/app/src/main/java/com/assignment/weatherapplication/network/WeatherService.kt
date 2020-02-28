@@ -1,7 +1,7 @@
-package com.test.weatherapplication.network
+package com.assignment.weatherapplication.network
 
-import com.test.weatherapplication.network.response.WeatherHourlyResponse
-import com.test.weatherapplication.network.response.WeatherResponse
+import com.assignment.weatherapplication.network.response.WeatherHourlyResponse
+import com.assignment.weatherapplication.network.response.WeatherResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query

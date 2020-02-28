@@ -1,6 +1,6 @@
-package com.test.weatherapplication.network
+package com.assignment.weatherapplication.network
 
-import com.test.weatherapplication.BuildConfig
+import com.assignment.weatherapplication.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

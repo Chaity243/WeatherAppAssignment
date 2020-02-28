@@ -1,4 +1,4 @@
-package com.test.weatherapplication.network.response.modal
+package com.assignment.weatherapplication.network.response.modal
 
 import com.google.gson.annotations.SerializedName
 

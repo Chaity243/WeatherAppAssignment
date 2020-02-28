@@ -1,4 +1,4 @@
-package com.test.weatherapplication.model
+package com.assignment.weatherapplication.model
 
 
 import androidx.lifecycle.LiveData
