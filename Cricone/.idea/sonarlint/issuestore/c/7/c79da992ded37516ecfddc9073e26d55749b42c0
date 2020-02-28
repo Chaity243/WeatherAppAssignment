@@ -1,0 +1,4 @@
+
+esquid:UselessImportCheck"5Remove this unused import 'retrofit2.http.Multipart'.(ù«÷åþÿÿÿÿ8âé•²†.
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¡Ùìúúÿÿÿÿ
+isquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(âåÆÇ8”ð²†.

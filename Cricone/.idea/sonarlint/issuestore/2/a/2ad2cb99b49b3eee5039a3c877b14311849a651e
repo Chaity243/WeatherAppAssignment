@@ -1,0 +1,10 @@
+
+Bsquid:S1172u"&Remove these unused method parameters.(‚„å˜ûÿÿÿÿ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ¤ßæûÿÿÿÿ
+squid:S1186u"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚„å˜ûÿÿÿÿ
+isquid:CommentedOutCodeLine¥"<This block of commented-out lines of code should be removed.(©ª¼z8ûõ¾²†.
+Msquid:S5411k"*Use the primitive boolean expression here.(ôë¹Èüÿÿÿÿ8Ëú˜´†.
+@squid:S1604¢"(Make this anonymous inner class a lambda(À³Ù·
+Gsquid:S1604¯"(Make this anonymous inner class a lambda(¯‚Æ÷8ÚÕå´†.
+Fsquid:S5411j"*Use the primitive boolean expression here.(°›»©ûÿÿÿÿ
+osquid:CommentedOutCodeLine³"<This block of commented-out lines of code should be removed.(‡©ò¬ıÿÿÿÿ8Ü“ş´†.

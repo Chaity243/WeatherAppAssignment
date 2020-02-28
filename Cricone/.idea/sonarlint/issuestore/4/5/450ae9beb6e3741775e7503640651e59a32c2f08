@@ -1,0 +1,5 @@
+
+qsquid:UselessImportCheck"FRemove this unused import 'com.example.cricone.Requests.LoginRequest'.(º≈≠Œ8»‘£≤Ü.
+gsquid:CommentedOutCodeLine!"<This block of commented-out lines of code should be removed.(•äØ ˇˇˇˇˇ
+wsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(°ŸÏ˙˙ˇˇˇˇ
+nsquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(•äØ ˇˇˇˇˇ8ÿÃÓ¥Ü.
